@@ -1,0 +1,198 @@
+# installing Sublime..
+	
+		1.sudo add-apt-repository ppa:webupd8team/sublime-text-3
+		2.sudo apt-get update
+		3.sudo apt-get install sublime-text-installer
+		Usage of sublime
+		1.subl 
+
+# installing Mysql...
+
+		sudo apt-get install mysql-server -- To restart mysql server
+		
+		sudo service mysql restart -- To stop mysql server
+		
+		sudo service mysql stop -- To login in mysql database
+		
+		mysql -u root -p
+
+# few database commands
+
+		show databases;
+		use database_name;
+		show databases;
+		show tables;
+		To stop mysql server
+		sudo service mysql start
+
+
+# RVM installation 
+
+		1.sudo apt-get install curl #it will install curl
+
+		2.\curl -sSL https://get.rvm.io | bash -s stable
+
+		3.gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3 -- #if you get error in step2
+
+
+# Ruby installation 
+
+		ruby version on it
+			rvm -v -- give version of rvm insalled
+			rvm list -- list all the ruby versions installed on ubunu machine
+			rvm install 1.9.3 -- installs ruby version 1.9.3
+			rvm install 1.8.7 --
+			rvm install 2.0.0 --
+			rvm list
+			rvm use 1.9.3 -- used select ruby version 1.9.3
+			ruby -v -- it will gives 1.9.3
+			rvm use 2.0.0
+			ruby -v --it will give 2.0.0
+			rvm use 1.8.7
+			ruby -v -- will give 1.8.7
+
+
+# installing rails
+
+		1. install 2.3.5,3.2.3,4.0.0 rails versions in ruby 1.9.3 by creating proper gemsets
+
+				rvm use 1.9.3 -- used select ruby 1.9.3
+				rvm gemset create rails2 -- create a gemset for rails2
+				rvm gemset use rails2 -- select the gemset for rails2
+				gem install rails -v '2.3.5'
+				
+				rvm gemset create rails3 -- create a gemset for rails3
+				rvm gemset use rails3 -- select the gemset for rails3
+				gem install rails -v '3.2.3'
+				
+				rvm gemset create rails4 -- create a gemset for rails2	
+				rvm gemset use rails4 -- select the gemset for rails2
+				gem install rails -v '4.0.0'
+
+		2. inatsall 3.2.3 , 4.0.0,4.1.0 rails versions in ruby 2.0.0 using proper gemsets
+
+				rvm use 2.0.0 -- used select ruby 2.0.0
+				rvm gemset create rails3 -- create a gemset for rails2
+				rvm gemset use rails3 -- select the gemset for rails2
+				gem install rails -v '3.2.3'
+				
+				rvm gemset create rails4 -- create a gemset for rails3
+				rvm gemset use rails4 -- select the gemset for rails3
+				gem install rails -v '4.0.0'
+				
+				rvm gemset create rails41 -- create a gemset for rails2
+				rvm gemset use rails41 -- select the gemset for rails2
+				gem install rails -v '4.1.0'
+
+		3. install 2.3.5, 2.8.7 and 3.0.0 rails versions in ruby 1.8.7 using proper gemsets
+				
+				rvm use 1.8.7 -- used select ruby 1.8.7
+				rvm gemset create rails2
+				rvm gemset use rails2 -- select the gemset for rails2
+				gem install rails -v '2.3.5'
+				
+				rvm gemset create rails28 -- create a gemset for rails28
+				rvm gemset use rails28 -- select the gemset for rails28
+				gem install rails -v '2.8.7'
+				
+				rvm gemset create rails3 -- create a gemset for rails3
+				rvm gemset use rails3 -- select the gemset for rails3
+				gem install rails -v '3.0.0'
+
+
+# install Git...
+
+		1. install development tolls
+			sudo apt-get install libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev build-essential
+
+		2.install git
+			sudo apt-get install git-core
+
+		3. configure the git usename and email id(sudo nano ~/.gitconfig)
+			git config --global user.name "pradeep"
+			git config --global user.email pradeepnemmani@gmail.com
+
+		4.git config --list
+
+
+# few common commands
+		
+		git branches -- shows all branches
+
+		git checkout -b child_branch -- creates new branch and makes child_bramch to develop
+
+		git diff -- shows the line by line differen between older and modified code
+
+		git diff file_name -- lists changes made to file_name file
+
+		git log -p -- shows git log (details/history of commited )
+
+# few git commands...
+
+		git status -- shows the updated files
+
+		git add . --  converts untracked files to tracked files
+
+		git commit -m "proper comment" -- comments for the updates
+
+		git push -u origin master -- "push the code to repository"
+
+
+# few commands for  pushing the code from child branch
+
+		git checkout -b child_branch -- creates new branch and makes child_bramch to develop
+
+		git add . --  converts untracked files to tracked files
+
+		git commit -m "proper comment" -- comments for the updates
+
+		git checkout master -- change the working branch to master before push
+
+		git push -- "push the code to repository"
+
+
+# cloning the repository/directory
+
+		git init -- initialising the git
+
+		git remote add origin PATH/TO/REPO(ex:- git remote add origin https://github.com/pradeepnemmani/user_details.git)
+		
+		git fetch
+
+		git clone PATH/TO/REPO(ex:- git clone https://github.com/pradeepnemmani/user_details.git)
+
+
+# few important points ROR developing
+	
+		rails new  rails_app -- creates new application
+
+		bundle install -- installs all gems required for application(which are mentioned in gem file)
+
+		rails generate controller controller_name method1  method1 method2 method3............ -- creates the controller with methods 
+
+		rails generate model model_name prop1:string/integer  prop2:string/integer  prop3:string/integer  ....... -- creates the model with properties
+
+		rake db:migrate -- run this command when ever model is creates
+
+		rake db:test:prepare -- run this command when for testing
+
+		rails generate migration migration_name_to_model property:string/integer  property2:string/integer ...  -- adds the  property to model(to_model mentioned)
+
+		rake db:migrate -- run this command when ever model/migrate is added
+
+
+# rails/heroku debug commands or test in rails console....
+
+	Imp command == for debugging***********************************<%= debug(params) if Rails.env.development?%> ***********************************
+
+		Rails.env?
+		=> development/test/production
+
+		Rails.env.development?
+		=> true/false
+
+		Rails.env.test?
+		=> true/false
+
+		Rails.env.production?
+		=> true/false
