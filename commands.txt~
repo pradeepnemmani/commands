@@ -261,16 +261,5 @@ add the javascript line in aplication html
 		requir 'digest'
 		
 		Digest::SHA2.hexdigest("to_encrypt")
-# time 
-
-		Time.now.utc
 
 
-
-it "should have a non-blank body" do
-      		get  :home
-      		response.body.should_not =~ /<body>\s*<\/body>/ ------- check whether body is not empty...
-  end
-
-
-  correct email-regix -- email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
