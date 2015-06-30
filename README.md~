@@ -1,6 +1,6 @@
 # commands
 
-					<tr>
+<tr>
 				 		<td>
 				 			<% @microposts.each do |micropost| %>s
 				 		</td>

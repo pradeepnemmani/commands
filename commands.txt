@@ -274,3 +274,4 @@ it "should have a non-blank body" do
 
 
   correct email-regix -- email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+8
